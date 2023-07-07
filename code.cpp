@@ -26,11 +26,11 @@ void show(){
    for (int i = 0; i < total; i++)
    {
       std::cout<<"Data of Student: "<<i+1<<std::endl<<std::endl;
-      std::cout<<"Name: "<<arr1[i];
-      std::cout<<"Rollno: "<<arr2[i];
-      std::cout<<"Couse: "<<arr3[i];
-      std::cout<<"Class: "<<arr4[i];
-      std::cout<<"Contact: "<<arr5[i];
+      std::cout<<"Name: "<<arr1[i]<<std::endl;
+      std::cout<<"Rollno: "<<arr2[i]<<std::endl;
+      std::cout<<"Couse: "<<arr3[i]<<std::endl;
+      std::cout<<"Class: "<<arr4[i]<<std::endl;
+      std::cout<<"Contact: "<<arr5[i]<<std::endl;
    }
    
 }
@@ -43,7 +43,7 @@ void update(){
 void deleterecord(){
    
 }
-int main(){
+ main(){
    int userValue;
    while(true){
    std::cout<<"Please press 1 to enter data"<<std::endl;
@@ -79,7 +79,5 @@ int main(){
       std::cout<<"Invalied Input"<<std::endl;
       break;
     }
-    break;
    }
-   return 0;
 }
