@@ -1,41 +1,52 @@
 #include<iostream>
-std::string arr1[20], arr2[20],arr3[20],arr4[20],arr5[20];
-int total = 0;
+std::string arr1[20],arr2[20],arr3[20];
+int totalStudent;
 void enter(){
-   int choice;
-   std::cout<<"How Many students do you want to enter: ";
-   std::cin>>choice;
-   total=total+choice; 
-   for (int i = 0; i < choice; i++)
-   {
-     std:: cout<<"Enter data of student " <<i+1<<std::endl <<std::endl;
-     std::cout<<"Enter Name: ";
-     std::cin>>arr1[i];
-     std::cout<<"Enter Rollno.: ";
-     std::cin>>arr2[i];
-     std::cout<<"Enter Course: ";
-     std::cin>>arr3[i];
-     std::cout<<"Enter Class: ";
-     std::cin>>arr4[i];
-     std::cout<<"Enter Contact: ";
-     std::cin>>arr5[i];
-   }
-   
+  std::cout<<"how many student do you want to enter? ";
+  std::cin>>totalStudent;
+  for (int i = 0; i < totalStudent; i++)
+  {
+    std::cout<<"Please enter the records of student: "<<i+1 <<std::endl;
+    std::cout<<"Student's name: ";
+    std::cin.ignore();
+    std::getline(std::cin, arr1[i]);
+    std::cout<<"Student's ID: ";
+    std::cin>>arr2[i];
+    std::cout<<"Student's class: ";
+    std::cin>>arr3[i];
+  }
 }
 void show(){
-   for (int i = 0; i < total; i++)
-   {
-      std::cout<<"Data of Student: "<<i+1<<std::endl<<std::endl;
-      std::cout<<"Name: "<<arr1[i]<<std::endl;
-      std::cout<<"Rollno: "<<arr2[i]<<std::endl;
-      std::cout<<"Couse: "<<arr3[i]<<std::endl;
-      std::cout<<"Class: "<<arr4[i]<<std::endl;
-      std::cout<<"Contact: "<<arr5[i]<<std::endl;
-   }
-   
+  for (int i = 0; i < totalStudent; i++)
+  {
+    std::cout<<"Displaying record of student "<<i+1<<std::endl
+             <<"Student's name: "<<arr1[i]<<std::endl
+             <<"Student's ID: "<<arr2[i]<<std::endl
+             <<"Student's Class: "<<arr3[i]<<std::endl;
+  }
+  
 }
 void search(){
-   
+  std::string studentID, studentName, studentClass;
+   std::cout<<"Search: ";
+   std::cin>> studentID;
+   for(int i=0; i<totalStudent; i++){
+    if (studentID== arr2[i])
+    {
+      std::cout<<"Displaying record of student "<<i+1<<std::endl
+             <<"Student's name: "<<arr1[i]<<std::endl
+             <<"Student's ID: "<<arr2[i]<<std::endl
+             <<"Student's Class: "<<arr3[i]<<std::endl;
+    }
+    else if(studentName==arr1[i]){
+      std::cout<<"Displaying record of student "<<i+1<<std::endl
+             <<"Student's name: "<<arr1[i]<<std::endl
+             <<"Student's ID: "<<arr2[i]<<std::endl
+             <<"Student's Class: "<<arr3[i]<<std::endl;
+    }
+    
+   }
+
 }
 void update(){
    
